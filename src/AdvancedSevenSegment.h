@@ -1,12 +1,12 @@
-#ifndef AdvanceSevenSegment_H
-#define AdvanceSevenSegment_H
+#ifndef AdvancedSevenSegment_H
+#define AdvancedSevenSegment_H
 #include "Arduino.h"
 
-class AdvanceSevenSegment {
+class AdvancedSevenSegment {
 
 public:
     //first pins setup
-    explicit AdvanceSevenSegment(int a, int b, int c, int d, int e, int f, int g, int dot);
+    explicit AdvancedSevenSegment(int a, int b, int c, int d, int e, int f, int g, int dot);
 
     //for display numbers[0..9] use this function
     void setNumber(int number);
