@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "AdvancedSevenSegment.h"
 
-AdvanceSevenSegment::AdvanceSevenSegment(int a, int b, int c, int d, int e, int f, int g, int dot) {
+AdvancedSevenSegment::AdvancedSevenSegment(int a, int b, int c, int d, int e, int f, int g, int dot) {
     _a = a;
     _b = b;
     _c = c;
@@ -20,7 +20,7 @@ AdvanceSevenSegment::AdvanceSevenSegment(int a, int b, int c, int d, int e, int 
     pinMode(dot, OUTPUT);
 }
 
-void AdvanceSevenSegment::setNumber(int number) {
+void AdvancedSevenSegment::setNumber(int number) {
     switch (number) {
         case 0:
             print(1, 1, 1, 1, 1, 1, 0);
@@ -61,7 +61,7 @@ void AdvanceSevenSegment::setNumber(int number) {
 
 }
 
-void AdvanceSevenSegment::setCharacter(char c) {
+void AdvancedSevenSegment::setCharacter(char c) {
     //support UpperCase chars
     c = tolower(c);
 
@@ -110,7 +110,7 @@ void AdvanceSevenSegment::setCharacter(char c) {
 
 }
 
-void AdvanceSevenSegment::print(int a, int b, int c, int d, int e, int f, int g) {
+void AdvancedSevenSegment::print(int a, int b, int c, int d, int e, int f, int g) {
     digitalWrite(_a, a);
     digitalWrite(_b, b);
     digitalWrite(_c, c);
@@ -121,15 +121,15 @@ void AdvanceSevenSegment::print(int a, int b, int c, int d, int e, int f, int g)
 
 }
 
-void AdvanceSevenSegment::setDot(int state) {
+void AdvancedSevenSegment::setDot(int state) {
     digitalWrite(_dot, state);
 }
 
-void AdvanceSevenSegment::setDash() {
+void AdvancedSevenSegment::setDash() {
     print(0, 0, 0, 0, 0, 0, 1);
 }
 
-void AdvanceSevenSegment::refresh(int ms) {
+void AdvancedSevenSegment::refresh(int ms) {
     clean();
     setDot(1);
     delay(ms);
@@ -137,7 +137,7 @@ void AdvanceSevenSegment::refresh(int ms) {
     delay(50);
 }
 
-void AdvanceSevenSegment::clean() {
+void AdvancedSevenSegment::clean() {
     setDot(0);
     print(0, 0, 0, 0, 0, 0, 0);
 }
