@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <AdvancedSevenSegment.h>
 
-AdvanceSevenSegment sevenSegment(31, 33, 35, 37, 39, 41, 43, 45);
+AdvancedSevenSegment sevenSegment(31, 33, 35, 37, 39, 41, 43, 45);
 
 void setup() {
 }
